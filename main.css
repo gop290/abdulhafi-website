@@ -1,0 +1,113 @@
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+    color: white;
+  scroll-behavior: smooth;
+  background:black;
+  background-repeat: no-repeat;
+  transition: all 2s;
+}
+.logo{
+  width: 10%;
+}
+.abdu{
+  
+  position: relative;
+  right: 300px;
+  color: rgb(115, 184, 216);
+
+}
+#navbar{
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  
+}
+#navbar_ul{
+  color: white;
+  list-style-type: none;
+}
+a{
+  color: white;
+  text-decoration: none;
+  margin: 0px 50px;
+}
+a:hover{
+  background: orange;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.firstsection{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 200px;
+
+}
+.profile{
+  width: 240px;
+  height: 400px;
+  object-fit: cover;
+    margin-right: 40px;
+    border: 1px solid rgb(11, 151, 206);
+    border-width:5px ;
+    padding: 5px;
+    border-radius: 50%;
+    background: black;
+    animation-name: pro;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes pro {
+  from{
+    border: 5px solid rgb(11, 151, 206);
+  }
+  to{
+    border: 5px solid rgb(8, 99, 134);
+    box-shadow: 0px 20px 20px rgb(8, 99, 134);
+  }
+}
+#telling{
+  border: 2px solid rgb(24, 187, 152);
+  width: 19em;
+  height: 100%;
+  margin-left: 30px;
+}
+.hi{
+  text-align: center;
+}
+.social-media{
+  display: flex;
+  justify-content: space-evenly;
+}
+.allwork{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  width: 100%;
+}
+.slideshow {
+  width: 700px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.slideshow img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
