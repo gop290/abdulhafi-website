@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background: black;
+  color: white;
+}
+
+/* stop horizontal scroll */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  background: #333;
+  color:white;
+  padding: 15px 0;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navbar .nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar .nav-link:hover {
+  color: #ff6b6b;
+}
+
+.navbar .nav-link.active {
+  border-bottom: 2px solid #ff6b6b;
+}
+
+/* About section */
+.about {
+  min-height: calc(100vh - 60px); /* account for navbar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 800px;
+  background: black;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.2rem;
+}
+
+.intro {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+.skills {
+  margin-top: 25px;
+}
+
+.skills h2 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+.skills ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+}
+
+.skills li {
+  background: black;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 0.9rem;
+}
