@@ -81,9 +81,10 @@ body {
 
 /* PROFILE IMAGE */
 .profile {
-  width: 220px;
-  height: 220px;
-  object-fit: cover;
+  width: 320px;
+  height: 480px;
+  object-fit:cover;
+
   border-radius: 50%;
   border: 5px solid rgb(11, 151, 206);
   padding: 5px;
@@ -146,11 +147,13 @@ h1 {
   #navbar {
     flex-direction: column;
     gap: 10px;
+    
   }
 
   #navbar_ul {
     flex-direction: column;
     gap: 10px;
+   
   }
 
   /* FIRST SECTION */
@@ -158,10 +161,15 @@ h1 {
     flex-direction: column;
     padding-top: 160px;
     text-align: center;
+     
   }
+  .logo {
+  margin-bottom: -2rem;
+}
 
   #telling {
     width: 90%;
+    margin-top: 10rem;
   }
 
   .slideshow {
@@ -171,7 +179,7 @@ h1 {
 
   .profile {
     width: 180px;
-    height: 180px;
+    height: 280px;
   }
 
   /* SOCIAL */
