@@ -1,102 +1,182 @@
+/* RESET */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
-  background: black;
-  color: white;
-}
-
-/* stop horizontal scroll */
-html, body {
+  background: #000;
+  color: #fff;
   overflow-x: hidden;
 }
 
-/* Navbar */
+/* ================= NAVBAR ================= */
 .navbar {
-  background: #333;
-  color:white;
-  padding: 15px 0;
-}
-
-.navbar .container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #000;
   display: flex;
-  justify-content: center;
-  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  z-index: 1000;
+  border-bottom: 1px solid #222;
 }
 
-.navbar .nav-link {
-  color: white;
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #73b8d8;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: 0.3s;
 }
 
-.navbar .nav-link:hover {
-  color: #ff6b6b;
+.nav-links a:hover,
+.nav-links a.active {
+  background: orange;
 }
 
-.navbar .nav-link.active {
-  border-bottom: 2px solid #ff6b6b;
+/* ================= ABOUT HERO ================= */
+.about-hero {
+  margin-top: 80px;
+  text-align: center;
+  padding: 60px 20px 40px;
+  background: #050505;
 }
 
-/* About section */
-.about {
-  min-height: calc(100vh - 60px); /* account for navbar */
+.about-hero h1 {
+  font-size: 2.5rem;
+  color: #18bb98;
+}
+
+.about-hero p {
+  color: #aaa;
+  margin-top: 10px;
+}
+
+/* ================= ABOUT CONTENT ================= */
+.about-content {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 40px 20px;
+  justify-content: space-between;
+  padding: 60px 40px;
+  gap: 40px;
 }
 
-.container {
-  max-width: 800px;
-  background: black;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+.about-text {
+  max-width: 550px;
 }
 
-h1 {
+.about-text h2 {
+  margin-bottom: 15px;
+}
+
+.about-text h2 span {
+  color: #73b8d8;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+  line-height: 1.7;
+  color: #ccc;
+}
+
+/* IMAGE */
+.about-img img {
+  width: 260px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #0b97ce;
+  padding: 5px;
+  animation: glow 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 10px #0b97ce; }
+  to   { box-shadow: 0 0 25px #086386; }
+}
+
+/* ================= SKILLS ================= */
+.about-skills {
+  padding: 60px 40px;
+  background: #050505;
   text-align: center;
-  margin-bottom: 20px;
-  font-size: 2.2rem;
 }
 
-.intro {
-  font-size: 1.1rem;
-  font-weight: 500;
-  margin-bottom: 15px;
+.about-skills h2 {
+  margin-bottom: 30px;
+  color: #18bb98;
 }
 
-p {
-  margin-bottom: 15px;
-}
-
-.skills {
-  margin-top: 25px;
-}
-
-.skills h2 {
-  margin-bottom: 10px;
-  font-size: 1.4rem;
-}
-
-.skills ul {
-  list-style: none;
+.skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 10px;
+  gap: 15px;
+  max-width: 700px;
+  margin: auto;
 }
 
-.skills li {
-  background: black;
-  padding: 8px 12px;
+.skills-grid span {
+  background: #111;
+  padding: 10px;
   border-radius: 6px;
+  border: 1px solid #222;
+}
+
+/* ================= FOOTER ================= */
+footer {
   text-align: center;
-  font-size: 0.9rem;
+  padding: 20px;
+  background: #000;
+  border-top: 1px solid #222;
+  color: #777;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-img img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* ================= LANDSCAPE ================= */
+@media screen and (max-width: 900px) and (orientation: landscape) {
+
+  .about-content {
+    flex-direction: row;
+    padding-top: 40px;
+  }
+
+  .about-img img {
+    width: 180px;
+    height: 180px;
+  }
 }
