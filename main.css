@@ -198,4 +198,61 @@ h1 {
   }
 
 }
+/* ================= LANDSCAPE MODE ================= */
+@media screen and (max-width: 900px) and (orientation: landscape) {
+
+  /* Navbar */
+  #navbar {
+    padding: 8px 20px;
+  }
+
+  #navbar_ul {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  #navbar_ul li a {
+    font-size: 14px;
+    padding: 4px 8px;
+  }
+
+  /* First section */
+  .firstsection {
+    flex-direction: row;
+    align-items: center;
+    padding-top: 90px;
+    gap: 20px;
+  }
+
+  /* Text box */
+  #telling {
+    width: 45%;
+    font-size: 14px;
+    padding: 15px;
+  }
+
+  /* Slideshow */
+  .slideshow {
+    width: 40%;
+    height: 200px;
+  }
+
+  /* Profile */
+  .profile {
+    width: 140px;
+    height: 140px;
+  }
+
+  /* Social icons */
+  .social-media {
+    gap: 15px;
+  }
+
+  .social-media svg {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+
 
